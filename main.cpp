@@ -53,7 +53,7 @@ int ADD(int A, int B)
 }
 int(*FunctionPointer)(int A, int B);//주소를 기록하겠다. 인자가 있는//  반환형 변수이름 인자
 //call back 
-void Loadsync(int A, int B, (*WhenComplete)())
+void Loadsync(int A, int B)// (*WhenComplete)()
 {
 	//network
 	//Loadding
@@ -101,8 +101,8 @@ int Acceding(const void* PA, const void* PB)//포인터함수.; 반환
 
 int main()
 {
-	int Number[10] = { 1,19,2,4,7,9,3,11 };
-	qsort(Number, sizeof(Number), sizeof(int), Compare);
+	int Number[10] = {1,19,2,4,7,9,3,11,50,100};
+	qsort(Number, 10, sizeof(int), Compare);
 	for (auto D : Number)
 	{
 		std::cout << D << endl;
